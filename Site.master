@@ -1,51 +1,63 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="MasterPage" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
-    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    <link href="Styles/style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+    
+    <style type="text/css">
+        .style1
+        {
+            height: 140px;
+            width: 695px;
+        }
+    </style>
+    
 </head>
 <body>
-    <form runat="server">
-    <div class="page">
-        <div class="header">
-            <div class="title">
-                <h1>
-                    My ASP.NET Application
-                </h1>
-            </div>
-            <div class="loginDisplay">
-                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
-                    <AnonymousTemplate>
-                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
-                    </AnonymousTemplate>
-                    <LoggedInTemplate>
-                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
-                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
-                    </LoggedInTemplate>
-                </asp:LoginView>
-            </div>
-            <div class="clear hideSkiplink">
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
-                    </Items>
-                </asp:Menu>
-            </div>
-        </div>
-        <div class="main">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
-        </div>
-        <div class="clear">
-        </div>
+    <form id="form1" runat="server">
+   <div id="wrapper">
+   	<div id="header">
+		<h1>File Cubby</h1>
     </div>
-    <div class="footer">
+    <div align="right">
+    <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click" 
+            ForeColor="Black">Log Out</asp:LinkButton>
+    </div>
+	<div id="menu">
+		<ul>
+			<li><a href="Default.aspx">Home</a></li>
+			<li><a href="listAllUsers.aspx">List All Users</a></li>
+			<li><a href="#">Link Three</a></li>
+			<li><a href="#">Link Four</a></li>
+			<li><a href="#">Link Five</a></li>
+		    
+		</ul>
         
-    </div>
+	</div>
+
+	
+	<div id="content">
+		
+		<div class="entry">
+		<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+       
+
+        </asp:ContentPlaceHolder>
+    
+		</div>
+	</div>
+    <br />
+
+	<div id="footer" align = "center">
+	</div>
+
+</div>
+        
     </form>
 </body>
 </html>

@@ -1,17 +1,37 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
-    CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
-<asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+
 </asp:Content>
-<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <h2>
-        Welcome to ASP.NET!
-    </h2>
-    <p>
-        To learn more about ASP.NET visit <a href="http://www.asp.net" title="ASP.NET Website">www.asp.net</a>.
-    </p>
-    <p>
-        You can also find <a href="http://go.microsoft.com/fwlink/?LinkID=152368&amp;clcid=0x409"
-            title="MSDN ASP.NET Docs">documentation on ASP.NET at MSDN</a>.
-    </p>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div align= "center">
+    
+        <asp:ImageButton ID="imgbtnUpload" runat="server" Height="23px" 
+            ImageUrl="~/images/File-Icon-PSD.jpg" onclick="ImageButton1_Click" 
+            PostBackUrl="~/upload.aspx" />
+        <asp:LinkButton ID="lnkBtnUpload" runat="server" ForeColor="#33CCFF" PostBackUrl="~/upload.aspx">Upload</asp:LinkButton>
+    </div>
+    <!--Will repeat as many times as the items you want to repeat-->
+    <asp:repeater id="rptUploads" runat="server">       
+        <HeaderTemplate>
+          <table>
+            <tr>
+                <td>
+                    File Name
+                </td>                
+            </tr>
+        </HeaderTemplate>
+             
+             <ItemTemplate>
+            <tr>
+                <td>
+                   <%#  DataBinder.Eval(Container.DataItem,"[file]" ) %>
+                </td>                
+            </tr>
+        </ItemTemplate>
+        <FooterTemplate>
+            </table>
+        </FooterTemplate>
+    </asp:repeater>
 </asp:Content>
+
