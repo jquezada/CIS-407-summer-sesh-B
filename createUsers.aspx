@@ -18,7 +18,7 @@
     <div align ="Center" >           
       <b> <h2><asp:Label ID="lblCreateAccount" runat="server"  Text="Create Account"></asp:Label></h2></b>
     </div>
-   
+   <br />
     <div align ="center">   
     <asp:Panel ID="Panel1" runat="server" Height="250px" HorizontalAlign="Left"
         Width="450px">
@@ -31,35 +31,35 @@
                 Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
             <asp:Label ID="lblLastName" runat="server" Text="Last Name:" width="64px"></asp:Label>
-            <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtLastName" runat="server" width="124px"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                 ControlToValidate="txtLastName" 
                 ErrorMessage="*A last name is required!" ForeColor="Red" width="196px" 
                 Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
             <asp:Label ID="lblUsername" runat="server" Text="Username:" width="64px"></asp:Label>
-            <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtUsername" runat="server" width="124px"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
                 ControlToValidate="txtUsername" 
                 ErrorMessage="*Please enter a unique username!" ForeColor="Red" 
                 width="196px" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
             <asp:Label ID="lblPassword" runat="server" Text="Password:" width="64px"></asp:Label>
-            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" width="124px"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
                 ControlToValidate="txtPassword" 
                 ErrorMessage="*Please enter a password!" ForeColor="Red" width="196px" 
                 Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
             <asp:Label ID="lblReEnter" runat="server" Text="Reenter Password:" width="64px"></asp:Label>
-            <asp:TextBox ID="txtReEnter" runat="server" TextMode="Password"></asp:TextBox>
+            <asp:TextBox ID="txtReEnter" runat="server" TextMode="Password" width="124px"></asp:TextBox>
             <asp:CompareValidator ID="CompareValidator1" runat="server" 
                 ControlToCompare="txtPassword" ControlToValidate="txtReEnter" 
                 ErrorMessage="*Passwords do not match!" ForeColor="Red" width="196px" 
                 Display="Dynamic" EnableClientScript="False"></asp:CompareValidator>
             <br />
             <asp:Label ID="lblEmail" runat="server" Text="Email:" width="64px"></asp:Label>
-            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtEmail" runat="server" width="124px"></asp:TextBox>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
                 ControlToValidate="txtEmail" 
                 ErrorMessage="*Please enter a correct email!" ForeColor="Red" 

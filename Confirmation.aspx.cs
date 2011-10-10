@@ -11,4 +11,8 @@ public partial class Confirmation : System.Web.UI.Page
     {
 
     }
+    protected void btnLogon_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("logon.aspx");
+    }
 }

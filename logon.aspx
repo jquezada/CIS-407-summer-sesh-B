@@ -19,8 +19,9 @@
     <br />
     <br />
     <br />
-        
-    <div class="style1" align="center" >
+  
+    <br/>   
+     <div class="style1" align="center" >
     <asp:Label runat ="server" ID="lblError" Visible = "false" BackColor="Red"></asp:Label><br />
     <asp:Label ID="lblUserName" runat="server" Text="Username :" Width="80px"></asp:Label> 
     <asp:TextBox ID="txtUserName" runat= "server"></asp:TextBox><br />
@@ -32,15 +33,13 @@
        
         <br />
         <br />
-    <div font="" >
-        <h5 style="font-size: large; font-weight: bold; font-style: normal; font-family: 'Times New Roman', Times, serif">
+    <div style="font-family: Arial, Helvetica, sans-serif; font-size: medium" >         
          Welcome to File Cubby. If you are a returning user please log in. If this is your first
      time visiting then let me explain just what File Cubby is. File Cubby is a simple convenient
      secure way to store documents,pictures, and files online without the hassle of having to carry a
      thumb drive. Your files can only be viewed by you however if you are working on a 
             project and need to share files with members of a group that option is 
             availible.All you need to do is create an account and you are set to go!
-     </h5>   
     </div>
     <br />
         <asp:Table ID="Table1" runat="server" CellPadding="-1" CellSpacing="-1" 
@@ -50,9 +49,7 @@
    
    <!--Include the footer-->
    	<div id="footer">
-		<div id="footer-valid">
-			<a href="http://validator.w3.org/check/referer">xhtml</a> / <a href="http://www.ginger-ninja.net/">ginger ninja!</a>
-		</div>
+		
 	</div>
    </div>
   </div>
