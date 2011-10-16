@@ -32,8 +32,8 @@
 		<ul>
 			<li><a href="Default.aspx">Home</a></li>
 			<li><a href="listAllUsers.aspx">List All Users</a></li>
-			<li><a href="#">Link Three</a></li>
-			<li><a href="#">Link Four</a></li>
+			<li><a href="FeedBack.aspx">Feed Back</a></li>
+			<li><a href="ManageUploads.aspx">Manage Uploads</a></li>
 			<li><a href="#">Link Five</a></li>
 		    
 		</ul>

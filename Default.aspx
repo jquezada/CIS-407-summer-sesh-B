@@ -9,8 +9,7 @@
         <asp:ImageButton ID="imgbtnUpload" runat="server" Height="23px" 
             ImageUrl="~/images/File-Icon-PSD.jpg" onclick="ImageButton1_Click" 
             PostBackUrl="~/upload.aspx" />
-        <asp:LinkButton ID="lnkBtnUpload" runat="server" ForeColor="#33CCFF" 
-            PostBackUrl="~/upload.aspx" onclick="lnkBtnUpload_Click">Upload</asp:LinkButton>
+        <asp:LinkButton ID="lnkBtnUpload" runat="server" onclick="lnkBtnUpload_Click">Upload</asp:LinkButton>
     </div>
     <!--Will repeat as many times as the items you want to repeat-->
     <asp:repeater id="rptUploads" runat="server">       
